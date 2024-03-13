@@ -108,3 +108,19 @@ but exposes all the API as Scheme.
   - The [[https://www.gnu.org/s/gsrc/][GNU Source Release Collection]] (GSRC) is a user-land software
     distribution; unlike Guix, it relies on core tools available on the
     host system
+
+* Why this Fork?
+
+We are attempting to build guix from source on an ubuntu gcp server
+after the installation failed with the same libbacktrace error that nix had.
+So I have setup a root file sytem on /mnt/data1/nix/root where I am installing everything
+from time /mnt/data1/nix/time that checked out from https://github.com/meta-introspector/time/
+via the https://github.com/jmikedupont2/pick-up-nix which is the reason for the nix directory.
+
+So my methodology is to install each package and also check in the steps
+into a build.sh that is setup to be run out of that root system.
+the idea is to have a documented build to build the first guix version.
+
+you can see my repos checked out into the 12 and 13th
+https://github.com/meta-introspector/time/blob/main/2024/03/12
+https://github.com/meta-introspector/time/blob/main/2024/03/13 directories.
