@@ -122,9 +122,10 @@ die()
 # answering "yes".
 # $1: The prompt question.
 prompt_yes_no() {
-    local -l yn
-    read -rp "$1 [Y/n]" yn
-    [[ ! $yn || $yn = y || $yn = yes ]] || return 1
+    #local -l yn
+    #read -rp "$1 [Y/n]" yn
+    #[[ ! $yn || $yn = y || $yn = yes ]] || return 1
+    return 0
 }
 
 chk_require()
